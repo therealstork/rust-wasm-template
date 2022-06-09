@@ -1,0 +1,19 @@
+{
+  "name": "rust-wasm-template",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "run": "npm run build-wasm && npm run run-webpack",
+    "build": "npm run build-wasm && npm run build-webpack",
+    "build-wasm": "cd rust-app && wasm-pack build --target bundler --out-dir ../wasm/ && cd ..",
+    "run-webpack": "webpack serve",
+    "build-webpack": "webpack"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.73.0",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.2"
+  }
+}
